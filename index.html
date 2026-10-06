@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shreeya Reddy G | AI/ML Engineer</title>
+
+  <meta name="description"
+        content="AI/ML portfolio focused on Generative AI, Large Language Models, RAG, Machine Learning, MLOps and Responsible AI.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.95);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #60a5fa;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 25px;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #60a5fa;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 78px);
+      line-height: 1.05;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 4vw, 40px);
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: 18px;
+      color: #cbd5e1;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #3b82f6;
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .secondary {
+      color: #93c5fd;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .section-title span {
+      color: #60a5fa;
+    }
+
+    .about {
+      max-width: 900px;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .focus-grid,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 28px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #374151;
+    }
+
+    .card h3 {
+      color: white;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .tech {
+      margin-top: 16px;
+      color: #60a5fa !important;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .workflow-item {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .workflow-number {
+      color: #60a5fa;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .workflow-item h3 {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .workflow-item p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding-bottom: 110px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #64748b;
+      border-top: 1px solid #1f2937;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .focus-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<nav>
+  <div class="nav-container">
+
+    <div class="logo">SR.</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#skills">Skills</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">AI • MACHINE LEARNING • GENERATIVE AI</div>
+
+    <h1>Shreeya Reddy G.</h1>
+
+    <h2>AI/ML Engineer</h2>
+
+    <p>
+      Building intelligent, production-oriented AI systems with a focus
+      on Generative AI, Large Language Models, Retrieval-Augmented
+      Generation, machine learning, semantic search and MLOps.
+    </p>
+
+    <div class="buttons">
+
+      <a class="button primary"
+         href="#focus">
+        Explore My Focus
+      </a>
+
+      <a class="button secondary"
+         href="https://github.com/shreeyagundreddy-del"
+         target="_blank">
+        GitHub
+      </a>
+
+      <a class="button secondary"
+         href="mailto:gshreeyareddy@outlook.com">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      <span>01.</span> About
+    </h2>
+
+    <div class="about">
+
+      <p>
+        I am an AI/ML Engineer focused on designing and developing
+        practical AI systems, including Generative AI applications,
+        LLM-powered solutions, Retrieval-Augmented Generation pipelines,
+        semantic retrieval, machine learning workflows and production
+        AI services.
+      </p>
+
+      <br>
+
+      <p>
+        My work spans the AI lifecycle — from data and document
+        processing, embeddings and retrieval to model development,
+        evaluation, deployment, monitoring and responsible AI.
+        I enjoy building scalable AI solutions that combine strong
+        engineering practices with reliable machine learning and
+        Generative AI capabilities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- AREAS OF FOCUS -->
+
+<section id="focus">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      <span>02.</span> Areas of Focus
+    </h2>
+
+    <div class="focus-grid">
+
+
+      <div class="card">
+
+        <h3>Generative AI & LLMs</h3>
+
+        <p>
+          Building LLM-powered applications with a focus on
+          context-aware generation, prompt engineering,
+          grounded responses and AI-assisted knowledge retrieval.
+        </p>
+
+        <p class="tech">
+          LLMs · GPT · Generative AI · Prompt Engineering
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Retrieval-Augmented Generation</h3>
+
+        <p>
+          Designing RAG pipelines that connect language models
+          with relevant information through document processing,
+          embeddings, semantic retrieval and contextual grounding.
+        </p>
+
+        <p class="tech">
+          RAG · LangChain · Hugging Face · Embeddings
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Semantic Search & Retrieval</h3>
+
+        <p>
+          Working with vector-based retrieval systems, document
+          chunking, metadata enrichment and similarity search
+          to improve information discovery and context selection.
+        </p>
+
+        <p class="tech">
+          FAISS · Pinecone · Vector Search · Semantic Search
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Machine Learning</h3>
+
+        <p>
+          Developing and evaluating machine learning workflows
+          across supervised learning, deep learning, NLP,
+          personalization and model optimization.
+        </p>
+
+        <p class="tech">
+          PyTorch · TensorFlow · Scikit-learn · XGBoost
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Model Adaptation & Optimization</h3>
+
+        <p>
+          Exploring parameter-efficient model adaptation and
+          optimization techniques for specialized AI applications
+          and efficient model development.
+        </p>
+
+        <p class="tech">
+          LoRA · QLoRA · PEFT · Model Evaluation
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>MLOps & Production AI</h3>
+
+        <p>
+          Building reliable AI services and workflows around
+          deployment, experiment tracking, automation,
+          monitoring and model lifecycle management.
+        </p>
+
+        <p class="tech">
+          AWS · FastAPI · Docker · MLflow · CI/CD
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Responsible AI & Evaluation</h3>
+
+        <p>
+          Evaluating AI systems for groundedness, hallucinations,
+          response quality, robustness and responsible model behavior
+          while applying validation and protection mechanisms.
+        </p>
+
+        <p class="tech">
+          Guardrails · Groundedness · SHAP · LIME · Drift Detection
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Data & AI Engineering</h3>
+
+        <p>
+          Developing data-processing and feature workflows that
+          support machine learning and AI applications across
+          structured and unstructured information.
+        </p>
+
+        <p class="tech">
+          Python · SQL · PySpark · Spark · Airflow
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      <span>03.</span> Technical Toolkit
+    </h2>
+
+    <div class="skills-grid">
+
+
+      <div class="card">
+
+        <h3>AI & Machine Learning</h3>
+
+        <p>
+          Generative AI, Large Language Models, RAG,
+          NLP, Deep Learning, Recommendation Systems,
+          Embeddings, Semantic Search, Prompt Engineering,
+          Model Evaluation and Hyperparameter Tuning
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Languages & Frameworks</h3>
+
+        <p>
+          Python, SQL, R, PyTorch, TensorFlow,
+          Scikit-learn, XGBoost, Hugging Face,
+          LangChain, FastAPI, Flask, Pandas and NumPy
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Cloud & MLOps</h3>
+
+        <p>
+          AWS SageMaker, S3, Lambda, Step Functions,
+          ECS, ECR, CloudWatch, MLflow, Docker,
+          GitHub Actions, CI/CD and Git
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Data & Retrieval</h3>
+
+        <p>
+          Apache Spark, PySpark, Airflow, FAISS,
+          Pinecone, Vector Indexing, ETL/ELT,
+          Feature Engineering, Document Processing,
+          Chunking and Metadata Enrichment
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>AI Evaluation & Reliability</h3>
+
+        <p>
+          LLM Evaluation, Groundedness,
+          Hallucination Analysis, Response Validation,
+          Guardrails, Prompt-Injection Protection,
+          Drift Detection and Bias/Fairness Evaluation
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>Analytics & Experimentation</h3>
+
+        <p>
+          A/B Testing, Statistical Analysis,
+          Experiment Design, Tableau, Power BI,
+          Grafana, Jupyter Notebook and Matplotlib
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- APPROACH -->
+
+<section id="approach">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      <span>04.</span> How I Approach AI Systems
+    </h2>
+
+
+    <div class="workflow">
+
+
+      <div class="workflow-item">
+
+        <div class="workflow-number">01</div>
+
+        <h3>Understand</h3>
+
+        <p>
+          Translate the problem and available data into
+          clear AI and engineering requirements.
+        </p>
+
+      </div>
+
+
+      <div class="workflow-item">
+
+        <div class="workflow-number">02</div>
+
+        <h3>Build</h3>
+
+        <p>
+          Develop retrieval, ML or LLM workflows using
+          appropriate models, data and infrastructure.
+        </p>
+
+      </div>
+
+
+      <div class="workflow-item">
+
+        <div class="workflow-number">03</div>
+
+        <h3>Evaluate</h3>
+
+        <p>
+          Measure model behavior, retrieval quality,
+          reliability and overall system performance.
+        </p>
+
+      </div>
+
+
+      <div class="workflow-item">
+
+        <div class="workflow-number">04</div>
+
+        <h3>Deploy & Monitor</h3>
+
+        <p>
+          Productionize AI services with automation,
+          monitoring and lifecycle management.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      <span>05.</span> Let's Connect
+    </h2>
+
+    <p>
+      Interested in building reliable, scalable and
+      production-ready AI and machine learning systems.
+    </p>
+
+
+    <div class="buttons"
+         style="justify-content:center;">
+
+      <a class="button primary"
+         href="mailto:gshreeyareddy@outlook.com">
+        Email Me
+      </a>
+
+      <a class="button secondary"
+         href="https://github.com/shreeyagundreddy-del"
+         target="_blank">
+        View GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+  Shreeya Reddy G · AI/ML Engineer
+</footer>
+
+
+</body>
+</html>
